@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>8357D0E5-FD19-4E9B-BA7D-FD6BDF6D1874</string>
+	<key>IDESourceControlProjectName</key>
+	<string>SpeedBrain</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>6C9A876BC16531B109295C80D0AD9D2489FF5661</key>
+		<string>https://github.com/dutran90/speedbrain.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>SpeedBrain.xcodeproj</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>6C9A876BC16531B109295C80D0AD9D2489FF5661</key>
+		<string>../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/dutran90/speedbrain.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>6C9A876BC16531B109295C80D0AD9D2489FF5661</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>6C9A876BC16531B109295C80D0AD9D2489FF5661</string>
+			<key>IDESourceControlWCCName</key>
+			<string>SpeedBrain</string>
+		</dict>
+	</array>
+</dict>
+</plist>
