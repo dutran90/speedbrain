@@ -26,6 +26,10 @@ class ViewController: UIViewController {
     var number3 = Int(arc4random_uniform(10))
     var symbol = Int(arc4random_uniform(2))
     
+    var points = 0
+    var check = true
+    var failed = false
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
@@ -51,14 +55,26 @@ class ViewController: UIViewController {
     
     @IBAction func pressTrue(sender: AnyObject) {
         
-        changeNumber()
+        checkResult()
+        if check == true{
+            changeNumber()
+            points += 100
+        }else{
+            failed = true
+        }
         
     }
   
 
     @IBAction func pressFalse(sender: AnyObject) {
         
-        
+        checkResult()
+        if check == false{
+            changeNumber()
+            points += 100
+        }else{
+            failed == true
+        }
         
     }
     
@@ -83,7 +99,40 @@ class ViewController: UIViewController {
         }else{
             self.operatorSymbol.text = "-"
         }
+        score.text = String(points)
         
+    }
+    
+    func checkResult() -> Bool{
+        
+        if symbol == 0{
+            if number1 + number2 == number3{
+                check = true
+            }else{
+                check = false
+            }
+        }else{
+            if number1 - number2 == number3{
+                check = true
+            }else{
+                check = false
+            }
+        }
+        return check
+    }
+    
+    
+    override func shouldPerformSegueWithIdentifier(identifier: String?, sender: AnyObject?) -> Bool {
+        if identifier == "segueFailed"{
+            
+            if failed{
+                return true
+            }else{
+                return false
+            }
+            
+        }
+        return true
     }
     
 }

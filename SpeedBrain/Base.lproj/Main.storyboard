@@ -157,6 +157,7 @@
                                 </state>
                                 <connections>
                                     <action selector="pressTrue:" destination="EwX-Zk-G7k" eventType="touchUpInside" id="Ik9-6C-4cT"/>
+                                    <segue destination="pyx-rQ-Pcx" kind="presentation" identifier="segueFailed" modalPresentationStyle="formSheet" id="Mw7-Sq-qUl"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dZG-f6-9u0">
@@ -167,6 +168,7 @@
                                 </state>
                                 <connections>
                                     <action selector="pressFalse:" destination="EwX-Zk-G7k" eventType="touchUpInside" id="63I-rB-tft"/>
+                                    <segue destination="pyx-rQ-Pcx" kind="presentation" identifier="segueFailed" modalPresentationStyle="formSheet" id="Faf-Wo-rKH"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -280,5 +282,114 @@
             </objects>
             <point key="canvasLocation" x="1227" y="360"/>
         </scene>
+        <!--View Controller-->
+        <scene sceneID="iYR-Es-1aO">
+            <objects>
+                <viewController id="pyx-rQ-Pcx" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="HrR-07-wGC"/>
+                        <viewControllerLayoutGuide type="bottom" id="L8P-1n-Ghs"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="5fk-n4-yXn">
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="You are xxx man!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6T1-LG-chk">
+                                <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="40"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="heightClass=regular-widthClass=compact" misplaced="YES">
+                                    <rect key="frame" x="5" y="165" width="379" height="144"/>
+                                </variation>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="8F6-82-flU">
+                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                                <variation key="heightClass=regular-widthClass=compact" ambiguous="YES" misplaced="YES">
+                                    <rect key="frame" x="80" y="356" width="240" height="128"/>
+                                </variation>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3I4-6i-Rrw">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <state key="normal" title="Share">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <variation key="heightClass=regular-widthClass=compact" ambiguous="YES" misplaced="YES">
+                                    <rect key="frame" x="234" y="589" width="46" height="36"/>
+                                </variation>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="POQ-F2-ooJ">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <state key="normal" title="Try">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <variation key="heightClass=regular-widthClass=compact" ambiguous="YES" misplaced="YES">
+                                    <rect key="frame" x="110" y="589" width="46" height="36"/>
+                                </variation>
+                                <connections>
+                                    <segue destination="BYZ-38-t0r" kind="modal" id="iwe-qL-Sxy"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="6T1-LG-chk" firstAttribute="top" secondItem="HrR-07-wGC" secondAttribute="bottom" constant="145" id="3rQ-0q-6i4"/>
+                            <constraint firstItem="8F6-82-flU" firstAttribute="centerX" secondItem="6T1-LG-chk" secondAttribute="centerX" constant="5.5" id="Agi-Ks-FBg"/>
+                            <constraint firstItem="8F6-82-flU" firstAttribute="centerX" secondItem="3I4-6i-Rrw" secondAttribute="centerX" constant="-57" id="L91-Vp-PzE"/>
+                            <constraint firstAttribute="centerX" secondItem="6T1-LG-chk" secondAttribute="centerX" constant="5.5" id="Xcs-TR-YU0"/>
+                            <constraint firstItem="3I4-6i-Rrw" firstAttribute="top" secondItem="8F6-82-flU" secondAttribute="bottom" constant="105" id="c5p-Ma-8R5">
+                                <variation key="heightClass=regular-widthClass=compact" constant="60"/>
+                            </constraint>
+                            <constraint firstItem="POQ-F2-ooJ" firstAttribute="top" secondItem="8F6-82-flU" secondAttribute="bottom" constant="105" id="pPg-w2-qRC">
+                                <variation key="heightClass=regular-widthClass=compact" constant="60"/>
+                            </constraint>
+                            <constraint firstItem="8F6-82-flU" firstAttribute="centerX" secondItem="POQ-F2-ooJ" secondAttribute="centerX" constant="68" id="vmM-0B-dne"/>
+                            <constraint firstItem="8F6-82-flU" firstAttribute="top" secondItem="HrR-07-wGC" secondAttribute="bottom" constant="336" id="xWz-he-an3"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="6T1-LG-chk"/>
+                                <exclude reference="8F6-82-flU"/>
+                                <exclude reference="3I4-6i-Rrw"/>
+                                <exclude reference="POQ-F2-ooJ"/>
+                            </mask>
+                            <mask key="constraints">
+                                <exclude reference="3rQ-0q-6i4"/>
+                                <exclude reference="Xcs-TR-YU0"/>
+                                <exclude reference="Agi-Ks-FBg"/>
+                                <exclude reference="L91-Vp-PzE"/>
+                                <exclude reference="vmM-0B-dne"/>
+                                <exclude reference="xWz-he-an3"/>
+                                <exclude reference="pPg-w2-qRC"/>
+                                <exclude reference="c5p-Ma-8R5"/>
+                            </mask>
+                        </variation>
+                        <variation key="heightClass=regular-widthClass=compact">
+                            <mask key="subviews">
+                                <include reference="6T1-LG-chk"/>
+                                <include reference="8F6-82-flU"/>
+                                <include reference="3I4-6i-Rrw"/>
+                                <include reference="POQ-F2-ooJ"/>
+                            </mask>
+                            <mask key="constraints">
+                                <include reference="3rQ-0q-6i4"/>
+                                <include reference="Xcs-TR-YU0"/>
+                                <include reference="Agi-Ks-FBg"/>
+                                <include reference="L91-Vp-PzE"/>
+                                <include reference="vmM-0B-dne"/>
+                                <include reference="xWz-he-an3"/>
+                                <include reference="pPg-w2-qRC"/>
+                                <include reference="c5p-Ma-8R5"/>
+                            </mask>
+                        </variation>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="LBD-Pm-6Mz" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="Faf-Wo-rKH"/>
+    </inferredMetricsTieBreakers>
 </document>
