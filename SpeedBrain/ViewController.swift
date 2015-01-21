@@ -8,6 +8,7 @@
 
 import UIKit
 import Darwin
+import Social
 
 
 
@@ -61,6 +62,30 @@ class ViewController: UIViewController {
         
     }
     
+    @IBAction func share(sender: AnyObject) {
+        
+        if SLComposeViewController.isAvailableForServiceType(SLServiceTypeFacebook){
+            
+            var facebookSheet:SLComposeViewController = SLComposeViewController(forServiceType: SLServiceTypeFacebook)
+            
+            
+            facebookSheet.setInitialText("I'm playing SpeedBrain game! :)")
+            
+            self.presentViewController(facebookSheet, animated: true, completion: nil)
+            
+            
+        } else {
+            
+            var alert = UIAlertController(title: "Accounts", message: "Please login to a Facebook account to share.", preferredStyle: UIAlertControllerStyle.Alert)
+            
+            alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.Default, handler: nil))
+            
+            self.presentViewController(alert, animated: true, completion: nil)
+            
+        }
+
+        
+    }
     
     func pressTrue() {
         
